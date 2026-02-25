@@ -70,7 +70,8 @@ access to her child's records.
 
 ## High Level Description
 
-A Independent Identity Endorsement is a compound document consiting of JSON containing:
+A Independent Identity Endorsement is a compound document consiting of a JSON
+object containing:
 
 - a document showing the text of the signed document sent directly as a data URL
   or referenced by URL (or similar mechanism); In simple cases this may be a tet
@@ -102,7 +103,8 @@ consuming.
 
 ### Conceptual Example Documents
 
-These example documents convey the type of information contained in Independent Identity Endorsements, not necessarily their exact structure. Indeed, much of
+These example documents convey the type of information contained in Independent
+Identity Endorsements, not necessarily their exact structure. Indeed, much of
 this information will actually be conveyed via specialized access tokens or
 [Open Person Matching](/PortobelloAuth/open-person-matching) demographic hashes
 in order to preserve the privacy of identified individuals as much as is
