@@ -1,8 +1,5 @@
 # Independent Identity Endorsements
 
-TODO: switch name to focus on endorsements, since both an authorization grant
-and a witness of a relationship can be described as an endorsement
-
 The Independent Identity Endorsements specification defines a format for
 describing a legal document such as a contract or a witness of a birth
 certificate or other relationship that conveys authorization. Identity
