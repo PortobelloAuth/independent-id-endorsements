@@ -1,12 +1,20 @@
-# Open Digital Authorization Documents
+# Independent Identity Endorsements
 
-The Open Digital Authorization Documents specification defines a format for
+TODO: switch name to focus on endorsements, since both an authorization grant
+and a witness of a relationship can be described as an endorsement
+
+The Independent Identity Endorsements specification defines a format for
 describing a legal document such as a contract or a witness of a birth
-certificate or other relationship that conveys authorization.
+certificate or other relationship that conveys authorization. Identity
+Endorsements may directly convey authorization information, as in the case of an
+authorized representative, or implicit authorization information, as in the case
+of an endorsement indicating that an identity represents the parent or guardian
+of another (child) identity. Importantly, endorsements are associated with an
+Identity but they are not the identity itself.
 
 ## Companion Specifications
 
-Open Digital Authorization Documents is intended to be used with the
+Independent Identity Endorsements is intended to be used with the
 [Open Person Matching](/PortobelloAuth/open-person-matching) and
 [Open Independent ID](/PortobelloAuth/open-indepentent-id) specifications to
 create a digital Identity, Authentication, Authorization, and Privacy framework
@@ -51,20 +59,21 @@ to work.
 So, how do we enable a mother to collect her child's medical records? How do we
 enable your AI agent to filter and organize your email, but not randomly delete
 all of it? Not by giving them our identities! We do it by authorizing them to
-act on our behalf. Digital Authorization Documents are endorsements that are
-associated with
+act on our behalf. Independent Identity Endorsements are cryptographically
+signed JSON documents that are associated with
 [Open Independent Identities](/PortobelloAuth/open-indepentent-id). They
-indicate what we know about that identity and what we intend them to be able to
-do. You create an identity for your AI agent and authorize it to move, but not
-delete your email. Now your email services can tell the difference between you
-and your agent and act accordingly. We know and document the mother's
-relationship with her child. We endorse her identity with that relationship. Now
-health care providers can verify that endorsement, apply existing law
-accordingly, and give that mother access to her child's records.
+indicate relevant information that we know about an identity and what,
+optionally, we intend them to be able to do or not do. You create an identity
+for your AI agent and authorize it to move, but not delete your email. Now your
+email services can tell the difference between you and your agent and act
+accordingly. We know and document the mother's relationship with her child. We
+endorse her identity with that relationship. Now health care providers can
+verify that endorsement, apply existing law accordingly, and give that mother
+access to her child's records.
 
 ## High Level Description
 
-A Digital Authorization Document is a compound document consiting of:
+A Independent Identity Endorsement is a compound document consiting of:
 
 - a document showing the text of the signed document sent directly as a data URL
   or referenced by URL (or similar mechanism); In simple cases this may be a tet
@@ -97,7 +106,11 @@ consuming.
 ### Conceptual Example Documents
 
 These example documents convey the type of information contained in Digital
-Authorization Documents, not necessarily their exact structure.
+Authorization Documents, not necessarily their exact structure. Indeed, much of
+this information will actually be conveyed via specialized access tokens or
+[Open Person Matching](/PortobelloAuth/open-person-matching) demographic hashes
+in order to preserve the privacy of identified individuals as much as is
+reasonable.
 
 #### Agent Authorization
 
@@ -131,5 +144,14 @@ Authorization Documents, not necessarily their exact structure.
 
 #### Negative Authorization
 
-{ "subject": "Dominic Badguy" "by": "Kermit the Frog", "role": "denied access",
-"to": "Kermit the Frog", "verified_by": [{ "document": "restraining order" }] }
+```json
+{
+  "subject": "Dominic Badguy",
+  "by": "Kermit the Frog",
+  "role": "denied access",
+  "to": "Kermit the Frog",
+  "verified_by": [{
+    "document": "restraining order"
+  }]
+}
+```
