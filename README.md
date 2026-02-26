@@ -12,12 +12,12 @@ Identity but they are not the identity itself.
 ## Companion Specifications
 
 Independent Identity Endorsements is intended to be used with the
-[Open Person Matching](/PortobelloAuth/open-person-matching) and
-[Open Independent ID](/PortobelloAuth/open-indepentent-id) specifications to
-create a digital Identity, Authentication, Authorization, and Privacy framework
-that allows individuals control of their own identity and accounts, including
-delegated, limited access by human and automated agents, without account sharing
-and other insecure practices.
+[Open Person Matching](https://github.com/PortobelloAuth/open-person-matching)
+and [Open Independent ID](https://github.com/PortobelloAuth/open-indepentent-id)
+specifications to create a digital Identity, Authentication, Authorization, and
+Privacy framework that allows individuals control of their own identity and
+accounts, including delegated, limited access by human and automated agents,
+without account sharing and other insecure practices.
 
 ## Draft Status
 
@@ -58,8 +58,8 @@ enable your AI agent to filter and organize your email, but not randomly delete
 all of it? Not by giving them our identities! We do it by authorizing them to
 act on our behalf. Independent Identity Endorsements are cryptographically
 signed JSON documents that are associated with
-[Open Independent Identities](/PortobelloAuth/open-indepentent-id). They
-indicate relevant information that we know about an identity and what,
+[Open Independent Identities](https://github.com/PortobelloAuth/open-indepentent-id).
+They indicate relevant information that we know about an identity and what,
 optionally, we intend them to be able to do or not do. You create an identity
 for your AI agent and authorize it to move, but not delete your email. Now your
 email services can tell the difference between you and your agent and act
@@ -106,9 +106,9 @@ consuming.
 These example documents convey the type of information contained in Independent
 Identity Endorsements, not necessarily their exact structure. Indeed, much of
 this information will actually be conveyed via specialized access tokens or
-[Open Person Matching](/PortobelloAuth/open-person-matching) demographic hashes
-in order to preserve the privacy of identified individuals as much as is
-reasonable.
+[Open Person Matching](https://github.com/PortobelloAuth/open-person-matching)
+demographic hashes in order to preserve the privacy of identified individuals as
+much as is reasonable.
 
 #### Agent Authorization
 
